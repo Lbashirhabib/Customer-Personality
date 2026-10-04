@@ -1,0 +1,57 @@
+# Customer Personality Analysis
+## Unsupervised Segmentation + Supervised Classification
+
+A machine learning project that combines KMeans clustering
+and XGBoost classification to segment customers into distinct
+personality groups and predict which segment a new customer
+belongs to — enabling targeted marketing campaigns.
+
+## The Business Problem
+
+Sending the same marketing message to every customer is
+expensive and ineffective. Most campaigns get ignored because
+they are not relevant to the person receiving them.
+
+This project solves that by finding the natural groups that
+already exist in your customer base — based on how they
+actually spend, what they buy, how they respond to campaigns,
+and what their life looks like — then building a classifier
+that can place any new customer into the right group
+automatically.
+
+The result: the right message reaches the right customer
+from the moment they sign up.
+
+## What Makes This Project Different
+
+Most classification projects start with predefined labels.
+This one does not. The target variable does not exist in
+the original dataset — it is discovered from the data itself
+using KMeans clustering. Only after the natural groups are
+found does the supervised learning begin.
+
+This combination of unsupervised plus supervised learning
+is how real customer intelligence systems work in production.
+
+## The Dataset
+
+- Source: Customer Personality Analysis — Kaggle
+- Customers: 2,240 records
+- Features: 29 columns covering demographics, spending
+  history, purchase channels, and campaign responses
+- No predefined target — segments discovered through clustering
+
+## The Four Customer Segments
+
+| Segment | Customers (Train) | Profile | Marketing Strategy |
+|---|---|---|---|
+| At Risk | 846 | Previously active, declining engagement | Win-back campaigns, discounts |
+| Potential | 473 | Medium income, growing spend | Bundle deals, growth campaigns |
+| Low Engagement | 330 | Low spend, rarely responds | Budget offers, light touch |
+| High Value | 142 | High income, high spend, campaign-responsive | Premium offers, loyalty rewards |
+
+Key insight: High Value customers are the smallest segment
+at roughly 8% of the base — but they are the most responsive
+to campaigns and the highest spenders. The 80/20 rule
+showing up in real data.
+
